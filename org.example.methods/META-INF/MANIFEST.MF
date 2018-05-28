@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.example.methods
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.example.methods; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.13.0",
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.eclipse.xtend.lib;bundle-version="2.13.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.example.methods.services,
+ org.example.methods.serializer,
+ org.example.methods.methods,
+ org.example.methods.parser.antlr,
+ org.example.methods.scoping,
+ org.example.methods.generator,
+ org.example.methods.parser.antlr.internal,
+ org.example.methods.methods.impl,
+ org.example.methods.methods.util,
+ org.example.methods.validation,
+ org.example.methods
+Import-Package: org.apache.log4j

@@ -1,0 +1,44 @@
+grammar org.example.methods.Methods with org.eclipse.xtext.common.Terminals
+
+generate methods "http://www.example.org/methods/Methods"
+
+Model:
+	mehtods+=Method*;
+
+Method:
+	'public' type=Type name=ID'('(parameter=Parameter)?')' '{'
+		attributes+=Attribute*
+	'}'
+;
+
+Parameter:
+	parameterType=Type parameterName=ID
+;
+
+Attribute:
+	attrType=Type attribute=ID ('=' value=Value )? ';'
+;
+Type:
+	IntType | StringType | VoidType | BooleanType
+;
+
+Value:
+	valueInt=INT | valueOthers=ID
+;
+
+IntType:
+	'int'
+;
+
+StringType:
+	'String'
+;
+
+VoidType:
+	'void'
+;
+
+BooleanType:
+	'boolean'
+;
+
